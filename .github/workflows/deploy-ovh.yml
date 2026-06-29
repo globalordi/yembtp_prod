@@ -18,16 +18,30 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.OVH_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          echo "=== KEY FINGERPRINT (doit être SHA256:7KtIZKym+FkSlEL2vNfyLbg4PBiCweaxvcmQ2XPEX1Y) ==="
+          ssh-keygen -lf ~/.ssh/deploy_key || echo "❌ Clé illisible/mal formattée"
+          echo "=== KEY HEADER (3 premiers caractères de chaque ligne) ==="
+          head -1 ~/.ssh/deploy_key | head -c 30
+          echo ""
+          tail -1 ~/.ssh/deploy_key | head -c 30
+          echo ""
+          wc -l ~/.ssh/deploy_key
 
       - name: Smoke test SSH connection
         run: |
-          ssh -i ~/.ssh/deploy_key \
-              -p "${{ secrets.OVH_SSH_PORT }}" \
+          echo "=== Connexion vers ${OVH_SSH_USER}@${OVH_SSH_HOST}:${OVH_SSH_PORT} ==="
+          ssh -vvv -i ~/.ssh/deploy_key \
+              -p "${OVH_SSH_PORT}" \
               -o StrictHostKeyChecking=no \
               -o UserKnownHostsFile=/dev/null \
               -o ConnectTimeout=10 \
-              "${{ secrets.OVH_SSH_USER }}@${{ secrets.OVH_SSH_HOST }}" \
-              "echo OK; pwd; ls -la"
+              -o BatchMode=yes \
+              "${OVH_SSH_USER}@${OVH_SSH_HOST}" \
+              "echo CONNECTED; pwd; ls -la" 2>&1 | head -100
+        env:
+          OVH_SSH_USER: ${{ secrets.OVH_SSH_USER }}
+          OVH_SSH_HOST: ${{ secrets.OVH_SSH_HOST }}
+          OVH_SSH_PORT: ${{ secrets.OVH_SSH_PORT }}
 
       - name: Rsync deploy
         run: |
