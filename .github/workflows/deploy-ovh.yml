@@ -9,6 +9,11 @@ jobs:
   ssh-deploy:
     name: Deploy via SSH/rsync
     runs-on: ubuntu-latest
+    env:
+      # easingthemes/ssh-deploy@v5.1.0 ciblait Node 20 ; GitHub force Node 24
+      # depuis 2025-09 ce qui casse l'invocation rsync (newline → /bin/sh: --rsh: not found).
+      # On reste sur Node 20 jusqu'à upgrade de l'action.
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
