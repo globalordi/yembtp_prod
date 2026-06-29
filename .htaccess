@@ -1,0 +1,121 @@
+# ============================================================
+#  YEMBTP — Configuration Apache (LWS mutualisé)
+#  Sécurité, en-têtes HTTP, redirections, cache
+# ============================================================
+
+
+# ─────────────────────────────────────────────────────────────
+#  1. Forcer HTTPS (redirection 301 HTTP → HTTPS)
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────
+#  2. En-têtes de sécurité HTTP
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+
+  # HSTS — force HTTPS pendant 1 an (validé après phase de test 5 min)
+  # NB : pas de includeSubDomains (le parent globalordi.fr a d'autres sous-domaines)
+  Header always set Strict-Transport-Security "max-age=31536000"
+
+  # Empêche l'inclusion du site dans un <iframe> tiers (anti-clickjacking)
+  # SAMEORIGIN nécessaire car la modale légale charge mentions-legales.html
+  # et confidentialite.html en iframe depuis index.html (même origine).
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Empêche le navigateur de "deviner" un type MIME différent de celui annoncé
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Ne transmet l'URL référente qu'aux destinations de même origine en HTTPS
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Désactive les API navigateur non utilisées par le site
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()"
+
+  # Content Security Policy — version stricte (sans 'unsafe-inline', sans CDN externe pour CSS/fonts)
+  # - CSS et JS externalisés dans assets/css/ et assets/js/ (2026-06-13)
+  # - Fonts (Fraunces + Inter) self-hostées dans assets/fonts/ (2026-06-13) — plus aucun
+  #   appel à fonts.googleapis.com / fonts.gstatic.com, donc plus de transfert d'IP hors UE
+  # - Whitelist externe restante : Unsplash (images) + Formspree (formulaire AJAX)
+  # - frame-ancestors 'self' : permet la modale légale (pages chargées en iframe depuis
+  #   index.html, même origine)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests"
+
+  # Cross-Origin policies (durcissement supplémentaire)
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+
+  # Supprime l'en-tête "X-Powered-By" (cache la stack technique)
+  Header always unset X-Powered-By
+  Header always unset Server
+
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────
+#  3. Bloquer l'accès aux fichiers sensibles
+# ─────────────────────────────────────────────────────────────
+
+# Fichiers cachés (.git, .env, .htaccess lui-même côté lecture, etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Fichiers de documentation/config qui ne doivent jamais être servis
+<FilesMatch "\.(md|yml|yaml|json|lock|log|sh|sql|bak|swp|ini|conf)$">
+  Require all denied
+</FilesMatch>
+
+# Bloque l'accès direct au fichier de charte graphique et au PDF interne
+# (au cas où ils seraient uploadés par erreur)
+<FilesMatch "\.(pptx|psd|ai|sketch)$">
+  Require all denied
+</FilesMatch>
+
+
+# ─────────────────────────────────────────────────────────────
+#  4. Désactiver le listage des dossiers
+# ─────────────────────────────────────────────────────────────
+Options -Indexes
+
+
+# ─────────────────────────────────────────────────────────────
+#  5. Encodage par défaut
+# ─────────────────────────────────────────────────────────────
+AddDefaultCharset UTF-8
+
+
+# ─────────────────────────────────────────────────────────────
+#  6. Compression (bonus performance)
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────
+#  7. Cache navigateur (bonus performance)
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                "access plus 0 seconds"
+  ExpiresByType text/css                 "access plus 1 month"
+  ExpiresByType application/javascript   "access plus 1 month"
+  ExpiresByType image/jpeg               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/webp               "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 6 months"
+  ExpiresByType font/woff2               "access plus 1 year"
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────
+#  8. Page d'erreur 404 (renvoie vers l'accueil — site one-page)
+# ─────────────────────────────────────────────────────────────
+ErrorDocument 404 /index.html

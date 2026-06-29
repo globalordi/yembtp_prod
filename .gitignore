@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Claude Code local config
+.claude/
+
+# Gros binaires non adaptés au versionnage git
+YEM BTP-V1 PLAQUETTE.pdf

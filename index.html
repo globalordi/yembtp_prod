@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YEMBTP — Construisons ensemble des projets solides et durables</title>
+  <meta name="description" content="YEMBTP, spécialiste CVC pour les professionnels : climatisation, ventilation, chauffage, isolation, menuiserie et serrurerie. Solutions énergétiques sur mesure." />
+
+  <link rel="stylesheet" href="assets/css/fonts.css">
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" data-i18n-aria-label="nav.home_label" aria-label="Accueil">
+        <img src="images/logo-nav.png" alt="YEMBTP" />
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#about" data-i18n="nav.about">Entreprise</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#energy" data-i18n="nav.energy">Énergie</a></li>
+        <li><a href="#team" data-i18n="nav.team">Équipe</a></li>
+        <li><a href="#references" data-i18n="nav.references">Références</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria-label="i18n.aria_switch" aria-label="Choisir la langue">
+          <button type="button" class="lang-btn" data-lang-set="fr" data-i18n-aria-label="i18n.aria_fr" aria-label="Passer en français" aria-pressed="true">FR</button>
+          <button type="button" class="lang-btn" data-lang-set="en" data-i18n-aria-label="i18n.aria_en" aria-label="Passer en anglais" aria-pressed="false">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-gold"><span data-i18n="nav.cta">Devis gratuit</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" data-i18n-aria-label="nav.menu_label" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-i18n="nav.about">Entreprise</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#energy" data-i18n="nav.energy">Énergie</a>
+    <a href="#team" data-i18n="nav.team">Équipe</a>
+    <a href="#references" data-i18n="nav.references">Références</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+    <a href="tel:0977652559">09 77 65 25 59</a>
+    <a href="#contact" class="mobile-cta" data-i18n="nav.cta_mobile">Devis gratuit →</a>
+    <div class="lang-switch lang-switch--mobile" role="group" data-i18n-aria-label="i18n.aria_switch" aria-label="Choisir la langue">
+      <button type="button" class="lang-btn" data-lang-set="fr" data-i18n-aria-label="i18n.aria_fr" aria-label="Passer en français" aria-pressed="true">FR</button>
+      <button type="button" class="lang-btn" data-lang-set="en" data-i18n-aria-label="i18n.aria_en" aria-label="Passer en anglais" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            <span data-i18n="hero.tag">Spécialiste CVC · Pros &amp; Entreprises</span>
+          </div>
+          <h1 class="hero-title" data-i18n-html="hero.title">
+            Construisons ensemble<br/>
+            des projets <em>solides</em> <em>et durables.</em>
+          </h1>
+          <p class="hero-sub" data-i18n="hero.sub">
+            Votre projet, notre exigence jusque dans les moindres détails. Du diagnostic aux économies réelles, nous réduisons votre facture d'énergie de A à Z.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-gold"><span data-i18n="hero.cta_primary">Démarrer mon projet</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#services" class="btn btn-outline" data-i18n="hero.cta_secondary">Découvrir nos services</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <div class="num">2018</div>
+              <div class="lab" data-i18n="hero.meta1_lab">Année de création</div>
+            </div>
+            <div class="meta-item">
+              <div class="num">9</div>
+              <div class="lab" data-i18n="hero.meta2_lab">Pôles d'expertise</div>
+            </div>
+            <div class="meta-item">
+              <div class="num">A→Z</div>
+              <div class="lab" data-i18n="hero.meta3_lab">Suivi complet</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hv-bg"></div>
+          <div class="hv-arch" aria-hidden="true">
+            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+              <g stroke="rgba(212, 175, 105, 0.45)" stroke-width="0.6" fill="none">
+                <line x1="0" y1="120" x2="400" y2="120"/>
+                <line x1="0" y1="240" x2="400" y2="240"/>
+                <line x1="0" y1="360" x2="400" y2="360"/>
+                <line x1="100" y1="0" x2="100" y2="500"/>
+                <line x1="200" y1="0" x2="200" y2="500"/>
+                <line x1="300" y1="0" x2="300" y2="500"/>
+              </g>
+              <g stroke="rgba(212, 175, 105, 0.25)" stroke-width="0.4" fill="none">
+                <circle cx="200" cy="250" r="160"/>
+                <circle cx="200" cy="250" r="110"/>
+                <circle cx="200" cy="250" r="60"/>
+              </g>
+              <g stroke="rgba(244, 228, 181, 0.55)" stroke-width="0.8" fill="none">
+                <path d="M40 460 L40 200 L200 80 L360 200 L360 460 Z"/>
+                <line x1="40" y1="330" x2="360" y2="330"/>
+                <line x1="120" y1="200" x2="120" y2="460"/>
+                <line x1="280" y1="200" x2="280" y2="460"/>
+              </g>
+            </svg>
+          </div>
+          <div class="hv-chip hv-chip-1">
+            <div class="ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span data-i18n="hero.chip1">Certifiée gaz</span>
+          </div>
+          <div class="hv-chip hv-chip-2">
+            <div class="ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <span data-i18n="hero.chip2">CEE Partenaire</span>
+          </div>
+          <div class="hv-chip hv-chip-3">
+            <div class="ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 18V8l7-5 7 5v10"/></svg>
+            </div>
+            <span data-i18n="hero.chip3">+ 250 000 m²</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item"><span data-i18n="marquee.climatisation">Climatisation</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.ventilation">Ventilation</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.chauffage">Chauffage</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.isolation">Isolation thermique</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.menuiserie">Menuiserie</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.serrurerie">Serrurerie</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.plomberie">Plomberie</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.flocage">Flocage coupe-feu</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.energie">Solutions énergétiques</span> <span class="star">✦</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item"><span data-i18n="marquee.climatisation">Climatisation</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.ventilation">Ventilation</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.chauffage">Chauffage</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.isolation">Isolation thermique</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.menuiserie">Menuiserie</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.serrurerie">Serrurerie</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.plomberie">Plomberie</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.flocage">Flocage coupe-feu</span> <span class="star">✦</span></span>
+      <span class="marquee-item"><span data-i18n="marquee.energie">Solutions énergétiques</span> <span class="star">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img">
+          <div class="about-img-overlay">
+            <div class="ic">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 18h18M5 18V8l7-5 7 5v10M9 9h2v2H9zM13 9h2v2h-2zM9 13h2v2H9zM13 13h2v2h-2z"/></svg>
+            </div>
+            <div class="txt">
+              <small data-i18n="about.badge_overlay_small">Depuis 2018</small>
+              <strong data-i18n="about.badge_overlay_strong">+ 250 000 m² réalisés</strong>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="sec-eyebrow" data-i18n="about.eyebrow">À propos de l'entreprise</span>
+          <h2 class="sec-title" data-i18n-html="about.title">Une expertise au service de <em>projets durables</em>.</h2>
+          <p data-i18n-html="about.p1">
+            Depuis sa création en 2018, <strong>YEMBTP</strong> accompagne ses clients dans leurs projets avec expertise et engagement. Spécialisée en <strong>CVC</strong> (chauffage, ventilation, climatisation), en rénovation et en maintenance, notre entreprise met son savoir-faire au service de solutions durables et performantes.
+          </p>
+          <p data-i18n-html="about.p2">
+            Certifiée et qualifiée dans les domaines du <strong>gaz et de la soudure</strong>, YEMBTP garantit des interventions conformes aux normes les plus exigeantes, alliant sécurité, qualité et efficacité.
+          </p>
+          <p data-i18n-html="about.p3">
+            Soucieux de votre budget comme de l'environnement, nous vous accompagnons également dans l'obtention des dispositifs de <strong>Certificats d'Économies d'Énergie (CEE)</strong>, afin d'alléger significativement votre facture énergétique.
+          </p>
+          <div class="about-badges">
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              <span data-i18n="about.badge1">Certifiée gaz</span>
+            </span>
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              <span data-i18n="about.badge2">Qualifiée soudure</span>
+            </span>
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              <span data-i18n="about.badge3">Partenaire CEE</span>
+            </span>
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="about.badge4">Toute la France</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow" data-i18n="services.eyebrow">Nos services</span>
+        <h2 class="sec-title" data-i18n-html="services.title">Un savoir-faire complet, <em>de l'étude à la livraison.</em></h2>
+        <p class="sec-lead" data-i18n="services.lead">Étude · CVC / Plomberie · Serrurerie · Curage · Menuiserie extérieure · Flocage / Coupe-feu / Isolation thermique — un seul interlocuteur pour l'ensemble de vos lots techniques.</p>
+      </div>
+
+      <div class="services-tabs">
+        <span class="tab active" data-filter="all" data-i18n="services.tab_all">Tous les pôles</span>
+        <span class="tab" data-filter="etude" data-i18n="services.tab_etude">Étude</span>
+        <span class="tab" data-filter="cvc" data-i18n="services.tab_cvc">CVC / Plomberie</span>
+        <span class="tab" data-filter="serrurerie" data-i18n="services.tab_serrurerie">Serrurerie</span>
+        <span class="tab" data-filter="curage" data-i18n="services.tab_curage">Curage</span>
+        <span class="tab" data-filter="menuiserie" data-i18n="services.tab_menuiserie">Menuiserie</span>
+        <span class="tab" data-filter="flocage" data-i18n="services.tab_flocage">Flocage</span>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-category="etude">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+          </div>
+          <h3 data-i18n="services.c1_title">Étude et réalisation</h3>
+          <p data-i18n="services.c1_text">Analyse de vos besoins, conception sur mesure et pilotage complet des travaux — de l'avant-projet à la livraison.</p>
+          <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+        </div>
+        <div class="service-card" data-category="cvc">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+          </div>
+          <h3 data-i18n="services.c2_title">CVC / Plomberie</h3>
+          <p data-i18n="services.c2_text">Chauffage, ventilation, climatisation, réseaux d'eau et installations gaz — solutions performantes et conformes aux normes.</p>
+          <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+        </div>
+        <div class="service-card" data-category="serrurerie">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h3 data-i18n="services.c3_title">Serrurerie</h3>
+          <p data-i18n="services.c3_text">Fermetures, contrôles d'accès et ouvrages métalliques sur mesure pour le tertiaire et les bâtiments recevant du public.</p>
+          <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+        </div>
+        <div class="service-card" data-category="curage">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/><path d="M14 4l-4 6"/></svg>
+          </div>
+          <h3 data-i18n="services.c4_title">Curage</h3>
+          <p data-i18n="services.c4_text">Démolition sélective et préparation des bâtiments avant rénovation : dépose des éléments non structurels, tri et évacuation.</p>
+          <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+        </div>
+        <div class="service-card" data-category="menuiserie">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 12h16"/><path d="M12 3v18"/></svg>
+          </div>
+          <h3 data-i18n="services.c5_title">Menuiserie extérieure</h3>
+          <p data-i18n="services.c5_text">Fourniture et pose de fenêtres, portes, baies vitrées et façades — aluminium, bois et PVC adaptés à chaque projet.</p>
+          <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+        </div>
+        <div class="service-card" data-category="flocage">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg>
+          </div>
+          <h3 data-i18n="services.c6_title">Flocage / Coupe-feu / Isolation thermique</h3>
+          <p data-i18n="services.c6_text">Protection passive incendie, calfeutrement coupe-feu et isolation thermique : conformité ERP et performance énergétique.</p>
+          <div class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="mission">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow" data-i18n="mission.eyebrow">Mission &amp; Vision</span>
+        <h2 class="sec-title" data-i18n-html="mission.title">Notre engagement, votre <em>tranquillité</em>.</h2>
+      </div>
+      <div class="mission-grid">
+        <div class="mv-card">
+          <div class="mv-num">01</div>
+          <h3 data-i18n="mission.card1_h">Mission</h3>
+          <p data-i18n="mission.card1_p">Avec YEMBTP, chaque projet allie exigence technique, qualité durable et maîtrise énergétique. Nous mettons l'expertise de nos équipes au service de vos objectifs de performance.</p>
+        </div>
+        <div class="mv-card">
+          <div class="mv-num">02</div>
+          <h3 data-i18n="mission.card2_h">Vision</h3>
+          <p data-i18n="mission.card2_p">YEMBTP s'impose comme un partenaire de confiance, engagé pour un BTP plus performant et responsable, soucieux de l'environnement comme du budget de ses clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow" data-i18n="team.eyebrow">Organisation &amp; Gestion</span>
+        <h2 class="sec-title" data-i18n-html="team.title">Une équipe <em>pluridisciplinaire</em> et passionnée.</h2>
+        <p class="sec-lead" data-i18n="team.lead">Architectes, ingénieurs, chefs de projet et ouvriers qualifiés — réunis pour fournir des résultats d'exception, alliant qualité, durabilité et satisfaction client.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card team-card--has-bubble">
+          <div class="team-bubble" data-i18n="team.saber_bubble">Fondateur de YEMBTP, je mets toute mon expertise au service de vos projets.</div>
+          <div class="team-avatar team-avatar--clickable" role="button" tabindex="0" data-i18n-aria-label="team.aria_saber" aria-label="Voir le message de Saber">SB</div>
+          <h4>Saber Bendjaballah</h4>
+          <div class="role role--plain" data-i18n="team.saber_role">Président</div>
+          <div class="divider"></div>
+          <div class="team-exp" data-i18n="team.saber_exp">15 ans d'expérience dans le domaine du CVC</div>
+        </div>
+        <div class="team-card team-card--has-bubble">
+          <div class="team-bubble" data-i18n="team.ahmed_bubble">Je vous accompagne de l'étude à la livraison pour concrétiser vos projets.</div>
+          <div class="team-avatar team-avatar--clickable" role="button" tabindex="0" data-i18n-aria-label="team.aria_ahmed" aria-label="Voir le message d'Ahmed">AZ</div>
+          <h4>Ahmed Zekkour</h4>
+          <div class="divider"></div>
+          <div class="role" data-i18n="team.ahmed_role">Chargé d'affaires</div>
+        </div>
+        <div class="team-card team-card--has-bubble">
+          <div class="team-bubble" data-i18n="team.amanda_bubble">À votre écoute pour bâtir une solution sur mesure, adaptée à votre budget.</div>
+          <div class="team-avatar team-avatar--clickable" role="button" tabindex="0" data-i18n-aria-label="team.aria_amanda" aria-label="Voir le message d'Amanda">AF</div>
+          <h4>Amanda Franco</h4>
+          <div class="divider"></div>
+          <div class="role" data-i18n="team.amanda_role">Chargée d'affaires</div>
+        </div>
+        <div class="team-card team-card--has-bubble">
+          <div class="team-bubble" data-i18n="team.paulo_bubble">La menuiserie est ma passion : précision et finitions soignées garanties.</div>
+          <div class="team-avatar team-avatar--clickable" role="button" tabindex="0" data-i18n-aria-label="team.aria_paulo" aria-label="Voir le message de Paulo">PM</div>
+          <h4>Paulo Moreira</h4>
+          <div class="divider"></div>
+          <div class="role" data-i18n="team.paulo_role">Responsable Pôle Menuiserie</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENERGY SOLUTIONS -->
+  <section class="energy" id="energy">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow" data-i18n="energy.eyebrow">Solutions énergétiques</span>
+        <h2 class="sec-title" data-i18n-html="energy.title">Un accompagnement personnalisé dans votre <em>transition énergétique</em>.</h2>
+      </div>
+
+      <div class="energy-grid">
+        <div class="energy-visual"></div>
+        <div class="energy-text">
+          <p data-i18n-html="energy.p1"><strong>YEMBTP</strong> vous accompagne de A à Z dans la réalisation de vos projets d'économies d'énergie.</p>
+          <p data-i18n-html="energy.p2">À travers cette activité, nous vous proposons un suivi global et personnalisé, avec un <strong>interlocuteur unique</strong> tout au long de votre projet. Celui-ci assure la coordination entre nos différents pôles de compétences : bureau d'études, travaux, ainsi que l'accompagnement dans l'obtention de subventions lorsque cela est éligible.</p>
+          <p data-i18n-html="energy.p3">Notre objectif est double : vous permettre de <strong>réduire le coût global de vos travaux</strong> grâce aux aides disponibles, mais aussi d'optimiser durablement vos consommations énergétiques. Nous travaillons également sur la réduction de vos factures d'électricité grâce à nos partenariats directs avec des fournisseurs d'énergie.</p>
+        </div>
+      </div>
+
+      <div class="energy-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h5 data-i18n="energy.s1_h">Bureau d'étude</h5>
+          <p data-i18n="energy.s1_p">Analyse, faisabilité, dimensionnement, plans et chiffrage des travaux.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h5 data-i18n="energy.s2_h">Gestion de projets</h5>
+          <p data-i18n="energy.s2_p">Coordination et suivi de la mise en œuvre. Plateforme OPERAT.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h5 data-i18n="energy.s3_h">Financements</h5>
+          <p data-i18n="energy.s3_p">Certificats d'Économies d'Énergie (CEE) et aides publiques mobilisables.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h5 data-i18n="energy.s4_h">Travaux</h5>
+          <p data-i18n="energy.s4_p">CVC, plomberie, serrurerie, menuiserie, curage, flocage, isolation, coupe-feu.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <h5 data-i18n="energy.s5_h">Courtage énergie</h5>
+          <p data-i18n="energy.s5_p">Conseil et accompagnement pour accéder aux meilleures offres du marché.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section class="references" id="references">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow" data-i18n="refs.eyebrow">Nos références</span>
+        <h2 class="sec-title" data-i18n-html="refs.title">Des chantiers d'<em>envergure</em>, livrés avec exigence.</h2>
+        <p class="sec-lead" data-i18n="refs.lead">Hôpitaux, parkings, équipements publics — YEMBTP intervient sur des sites sensibles avec un haut niveau de qualification.</p>
+      </div>
+
+      <div class="ref-grid">
+        <div class="ref-card ref-card--clickable" data-modal-open="michelet" role="button" tabindex="0" data-i18n-aria-label="refs.c1_aria" aria-label="Ouvrir la galerie avant/après — Parking Michelet">
+          <div class="ref-img">
+            <img src="https://images.unsplash.com/photo-1470224114660-3f6686c562eb?w=900&q=80&auto=format&fit=crop" alt="Parking" loading="lazy" />
+            <span class="ref-img-tag" data-i18n="refs.c1_tag">Parking</span>
+            <span class="ref-ba-badge" aria-hidden="true" data-i18n="refs.c1_ba">Avant / Après</span>
+          </div>
+          <div class="ref-body">
+            <div class="ref-loc" data-i18n="refs.c1_loc">La Défense</div>
+            <h4 data-i18n="refs.c1_h">Parking Michelet</h4>
+            <p data-i18n="refs.c1_p">Application de flocage coupe-feu sur l'ensemble des structures du parking.</p>
+            <div class="ref-spec" data-i18n="refs.c1_spec">95 000 m² de flocage coupe-feu</div>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-img">
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=900&q=80&auto=format&fit=crop" alt="Hôpital Avicenne" loading="lazy" />
+            <span class="ref-img-tag" data-i18n="refs.hopital_tag">Hôpital</span>
+          </div>
+          <div class="ref-body">
+            <div class="ref-loc" data-i18n="refs.c2_loc">Île-de-France</div>
+            <h4 data-i18n="refs.c2_h">Hôpital Avicenne</h4>
+            <p data-i18n="refs.c2_p">Isolation des planchers bas par projection de produit fibreux, épaisseur 120 mm.</p>
+            <div class="ref-spec" data-i18n="refs.c2_spec">23 372 m² isolés · Ép. 120 mm</div>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-img">
+            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=900&q=80&auto=format&fit=crop" alt="Hôpital René Muret" loading="lazy" />
+            <span class="ref-img-tag" data-i18n="refs.hopital_tag">Hôpital</span>
+          </div>
+          <div class="ref-body">
+            <div class="ref-loc" data-i18n="refs.c3_loc">Île-de-France</div>
+            <h4 data-i18n="refs.c3_h">Hôpital René Muret</h4>
+            <p data-i18n="refs.c3_p">Isolation des planchers bas par projection de produit fibreux, épaisseur 120 mm.</p>
+            <div class="ref-spec" data-i18n="refs.c3_spec">8 900 m² isolés · Ép. 120 mm</div>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-img">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80&auto=format&fit=crop" alt="Hôpital Legouest Metz" loading="lazy" />
+            <span class="ref-img-tag" data-i18n="refs.c4_tag">Hôpital · Metz</span>
+          </div>
+          <div class="ref-body">
+            <div class="ref-loc" data-i18n="refs.c4_loc">Metz</div>
+            <h4 data-i18n="refs.c4_h">Hôpital Legouest</h4>
+            <p data-i18n="refs.c4_p">Isolation des planchers bas et calorifugeage des tuyauteries Eau Chaude, Chauffage et ECS.</p>
+            <div class="ref-spec" data-i18n="refs.c4_spec">15 000 m² · 13 950 ml de tuyauteries</div>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-img">
+            <img src="https://images.unsplash.com/photo-1481026469463-66327c86e544?w=900&q=80&auto=format&fit=crop" alt="Hôpital Percy" loading="lazy" />
+            <span class="ref-img-tag" data-i18n="refs.c5_tag">Hôpital militaire</span>
+          </div>
+          <div class="ref-body">
+            <div class="ref-loc" data-i18n="refs.c5_loc">Hôpital militaire</div>
+            <h4 data-i18n="refs.c5_h">Hôpital Percy</h4>
+            <p data-i18n="refs.c5_p">Calorifugeage des tuyauteries Eau Chaude, Chauffage et Eau Chaude Sanitaire.</p>
+            <div class="ref-spec" data-i18n="refs.c5_spec">7 000 ml de tuyauteries traitées</div>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-img">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80&auto=format&fit=crop" alt="Création d'un projet" loading="lazy" />
+            <span class="ref-img-tag" data-i18n="refs.c6_tag">Votre projet</span>
+          </div>
+          <div class="ref-body">
+            <div class="ref-loc" data-i18n="refs.c6_loc">Et vous, demain ?</div>
+            <h4 data-i18n="refs.c6_h">Votre prochain chantier</h4>
+            <p data-i18n="refs.c6_p">Tertiaire, hospitalier, industriel ou résidentiel collectif — nous étudions votre projet sans engagement.</p>
+            <div class="ref-spec"><a href="#contact" class="link-gold" data-i18n="refs.c6_cta">Discutons-en →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="sec-eyebrow" data-i18n="contact.eyebrow">Contact</span>
+          <h2 data-i18n-html="contact.title">Pour toute<br/>information,<br/><em>contactez-nous.</em></h2>
+          <p class="contact-info-lead" data-i18n="contact.lead">
+            Notre équipe vous répond sous 24h ouvrées et organise un rendez-vous d'étude sur site si nécessaire.
+          </p>
+
+          <div class="info-list">
+            <a class="info-item" href="mailto:yembtp@yembtp.fr">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contact.info_email">E-mail</div>
+                <div class="info-value">yembtp@yembtp.fr</div>
+              </div>
+            </a>
+            <a class="info-item" href="tel:0977652559">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contact.info_phone">Téléphone</div>
+                <div class="info-value">09 77 65 25 59</div>
+              </div>
+            </a>
+            <a class="info-item" href="https://www.google.com/maps?q=20+Rue+Louis+Armand+95130+Le+Plessis+Bouchard" target="_blank" rel="noopener noreferrer">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contact.info_addr">Adresse</div>
+                <div class="info-value">20, Rue Louis Armand<br/>95130 Le Plessis Bouchard</div>
+              </div>
+            </a>
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <div class="info-label" data-i18n="contact.info_zone">Zone d'intervention</div>
+                <div class="info-value" data-i18n="contact.info_zone_value">Toute la France</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqeogpbb" method="POST">
+          <span class="form-corner-br" aria-hidden="true"></span>
+          <div class="form-eyebrow"><span class="dot"></span><span data-i18n="contact.form_eyebrow">Devis personnalisé</span></div>
+          <h3 data-i18n-html="contact.form_title">Parlons de <em>votre projet</em>.</h3>
+          <p data-i18n="contact.form_lead">Gratuit, sans engagement. Un chargé d'affaires dédié vous rappelle sous 24h ouvrées.</p>
+          <div class="field-row">
+            <div class="field">
+              <input type="text" name="nom" required placeholder=" " id="f-nom" autocomplete="name" />
+              <label for="f-nom"><span data-i18n="contact.label_nom">Nom</span><span class="field-required">*</span></label>
+            </div>
+            <div class="field">
+              <input type="text" name="societe" placeholder=" " id="f-soc" autocomplete="organization" />
+              <label for="f-soc" data-i18n="contact.label_soc">Société</label>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <input type="email" name="email" required placeholder=" " id="f-mail" autocomplete="email" />
+              <label for="f-mail"><span data-i18n="contact.label_mail">E-mail</span><span class="field-required">*</span></label>
+            </div>
+            <div class="field">
+              <input type="tel" name="telephone" placeholder=" " id="f-tel" autocomplete="tel" />
+              <label for="f-tel" data-i18n="contact.label_tel">Téléphone</label>
+            </div>
+          </div>
+          <div class="field field-select">
+            <select id="f-type" name="type_projet">
+              <option data-i18n="contact.opt_clim">Climatisation</option>
+              <option data-i18n="contact.opt_vent">Ventilation / CVC</option>
+              <option data-i18n="contact.opt_chauf">Chauffage</option>
+              <option data-i18n="contact.opt_iso">Isolation / Flocage</option>
+              <option data-i18n="contact.opt_men">Menuiserie / Serrurerie</option>
+              <option data-i18n="contact.opt_cee">Solutions énergétiques (CEE)</option>
+              <option data-i18n="contact.opt_other">Autre</option>
+            </select>
+            <label for="f-type" data-i18n="contact.label_type">Type de projet</label>
+          </div>
+          <div class="field">
+            <textarea name="message" placeholder=" " id="f-msg"></textarea>
+            <label for="f-msg" data-i18n="contact.label_msg">Votre message — surface, contraintes, échéance…</label>
+          </div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot" />
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis — yembtp.fr" />
+          <button type="submit" class="btn btn-gold form-submit">
+            <span data-i18n="contact.submit">Envoyer ma demande</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-trust">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span data-i18n="contact.trust1">Données chiffrées</span>
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-i18n="contact.trust2">Réponse 24h</span>
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="contact.trust3">Sans engagement</span>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-wordmark">YEM<span>BTP</span></div>
+          <p data-i18n="footer.brand_p">Construisons ensemble des projets solides et durables. Spécialiste CVC, isolation, menuiserie et serrurerie pour les professionnels.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/yembtp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="footer.aria_ig" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.88 1.27 4 4 0 0 1 7.88-1.27z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" data-i18n-aria-label="footer.aria_google" aria-label="Profil Google">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 1 1 0-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0 0 12.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col1_h">Entreprise</h5>
+          <ul>
+            <li><a href="#about" data-i18n="footer.col1_about">À propos</a></li>
+            <li><a href="#team" data-i18n="footer.col1_team">Équipe</a></li>
+            <li><a href="#references" data-i18n="footer.col1_refs">Références</a></li>
+            <li><a href="#contact" data-i18n="footer.col1_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.col2_h">Services</h5>
+          <ul>
+            <li><a href="#services" data-i18n="footer.col2_s1">Climatisation</a></li>
+            <li><a href="#services" data-i18n="footer.col2_s2">Ventilation &amp; CVC</a></li>
+            <li><a href="#services" data-i18n="footer.col2_s3">Isolation &amp; Flocage</a></li>
+            <li><a href="#services" data-i18n="footer.col2_s4">Menuiserie / Serrurerie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h5 data-i18n="footer.col3_h">Contact</h5>
+          <ul>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <a href="mailto:yembtp@yembtp.fr">yembtp@yembtp.fr</a>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:0977652559">09 77 65 25 59</a>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://www.google.com/maps?q=20+Rue+Louis+Armand+95130+Le+Plessis+Bouchard" target="_blank" rel="noopener noreferrer">20, Rue Louis Armand<br/>95130 Le Plessis Bouchard</a>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span data-i18n="footer.zone">Intervention sur toute la France</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <div>© <span id="year"></span> <span data-i18n="footer.copyright">YEMBTP — Tous droits réservés · SIRET 83889464000047</span></div>
+        <div class="legal">
+          <a href="mentions-legales.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.legal_ml">Mentions légales</a>
+          <a href="confidentialite.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.legal_conf">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/vendor/gsap.min.js" defer></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+
+  <!-- MODALE AVANT / APRÈS — Parking Michelet
+       ⚠ Images Unsplash utilisées comme placeholders visuels — à remplacer par
+       les vraies photos du chantier (chantier-michelet-avant.jpg / chantier-michelet-apres.jpg)
+       avant mise en production commerciale. -->
+  <div class="ba-modal" id="baModalMichelet" role="dialog" aria-modal="true" aria-labelledby="baTitleMichelet" hidden>
+    <div class="ba-backdrop" data-ba-close aria-hidden="true"></div>
+    <div class="ba-dialog">
+      <button class="ba-close" type="button" data-i18n-aria-label="ba.close" aria-label="Fermer la fenêtre" data-ba-close>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <header class="ba-header">
+        <span class="ba-eyebrow" data-i18n="ba.eyebrow">Référence chantier · La Défense</span>
+        <h3 id="baTitleMichelet" data-i18n-html="ba.title">Parking Michelet <em>— avant / après</em></h3>
+        <p data-i18n="ba.desc">Application de flocage coupe-feu sur l'ensemble des structures porteuses du parking. Glissez la poignée centrale pour comparer l'état initial et le traitement final.</p>
+      </header>
+      <div class="ba-slider" data-ba-slider>
+        <img class="ba-img ba-after" src="https://images.unsplash.com/photo-1604063165585-e17e9c3c3f0b?w=1600&q=85&auto=format&fit=crop" data-i18n-alt="ba.alt_after" alt="Parking Michelet — après application du flocage coupe-feu" />
+        <div class="ba-clip">
+          <img class="ba-img ba-before" src="https://images.unsplash.com/photo-1474408886716-087263db7da1?w=1600&q=85&auto=format&fit=crop" data-i18n-alt="ba.alt_before" alt="Parking Michelet — état initial avant intervention" />
+        </div>
+        <span class="ba-label ba-label-before" data-i18n="ba.label_before">Avant</span>
+        <span class="ba-label ba-label-after" data-i18n="ba.label_after">Après</span>
+        <div class="ba-handle" aria-hidden="true">
+          <span class="ba-handle-knob">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg>
+          </span>
+        </div>
+      </div>
+      <footer class="ba-footer">
+        <div class="ba-stat">
+          <span class="ba-stat-num">95 000<small>m²</small></span>
+          <span class="ba-stat-lab" data-i18n="ba.stat1_lab">Flocage coupe-feu</span>
+        </div>
+        <div class="ba-stat">
+          <span class="ba-stat-num">ERP</span>
+          <span class="ba-stat-lab" data-i18n="ba.stat2_lab">Conformité réglementaire</span>
+        </div>
+        <div class="ba-stat">
+          <span class="ba-stat-num">2 h<small>F</small></span>
+          <span class="ba-stat-lab" data-i18n="ba.stat3_lab">Tenue au feu garantie</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- MODALE PAGES LÉGALES (mentions-legales.html / confidentialite.html) -->
+  <div class="legal-modal" id="legalModal" role="dialog" aria-modal="true" aria-label="Page légale" hidden>
+    <div class="legal-backdrop" data-legal-close aria-hidden="true"></div>
+    <div class="legal-dialog">
+      <button class="legal-close" type="button" aria-label="Fermer la fenêtre" data-legal-close>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="legal-loading" aria-hidden="true">Chargement…</div>
+      <iframe class="legal-iframe" id="legalIframe" title="Page légale" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <script src="assets/js/modal-legal.js" defer></script>
+
+  <script src="assets/js/modal-michelet.js" defer></script>
+
+  <!-- CHATBOT -->
+  <button class="cb-toggle" id="cbToggle" data-i18n-aria-label="cb.toggle_aria" aria-label="Ouvrir l'assistant YEMBTP">
+    <span class="cb-dot" aria-hidden="true"></span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <span class="cb-label" data-i18n="cb.toggle_label">Une question ?</span>
+  </button>
+
+  <div class="cb-panel" id="cbPanel" role="dialog" aria-label="Assistant YEMBTP" aria-modal="false">
+    <div class="cb-header">
+      <div class="cb-ava" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fdf6e3" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </div>
+      <div>
+        <h4>Assistant YEMBTP</h4>
+        <p>En ligne</p>
+      </div>
+      <button class="cb-close" id="cbClose" aria-label="Fermer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cb-body" id="cbBody"></div>
+    <div class="cb-chips" id="cbChips"></div>
+    <form class="cb-input" id="cbForm" autocomplete="off">
+      <input type="text" id="cbInput" placeholder="Écrivez votre message…" aria-label="Votre message" />
+      <button type="submit" aria-label="Envoyer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <script src="assets/js/chatbot.js" defer></script>
+</body>
+</html>
