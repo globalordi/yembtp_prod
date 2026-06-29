@@ -27,9 +27,12 @@
 # ─────────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
 
-  # HSTS — force HTTPS pendant 1 an (validé après phase de test 5 min)
-  # NB : pas de includeSubDomains (le parent globalordi.fr a d'autres sous-domaines)
-  Header always set Strict-Transport-Security "max-age=31536000"
+  # HSTS — force HTTPS pendant 1 an, sur yembtp.fr + tous sous-domaines.
+  # 'preload' permet la soumission sur hstspreload.org (browsers built-in list).
+  # ⚠️ includeSubDomains affecte tous les sous-domaines (www, mail, etc.) :
+  # tout sous-domaine futur DEVRA servir HTTPS — décidé OK pour yembtp.fr (prod
+  # propre, pas de partage avec préprod LWS qui est sur globalordi.fr).
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
   # Empêche l'inclusion du site dans un <iframe> tiers (anti-clickjacking)
   # SAMEORIGIN nécessaire car la modale légale charge mentions-legales.html
