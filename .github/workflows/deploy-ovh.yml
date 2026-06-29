@@ -9,23 +9,28 @@ jobs:
   ssh-deploy:
     name: Deploy via SSH/rsync
     runs-on: ubuntu-latest
-    env:
-      # easingthemes/ssh-deploy@v5.1.0 ciblait Node 20 ; GitHub force Node 24
-      # depuis 2025-09 ce qui casse l'invocation rsync (newline → /bin/sh: --rsh: not found).
-      # On reste sur Node 20 jusqu'à upgrade de l'action.
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy via rsync over SSH
-        uses: easingthemes/ssh-deploy@v5.1.0
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.OVH_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.OVH_SSH_HOST }}
-          REMOTE_USER: ${{ secrets.OVH_SSH_USER }}
-          REMOTE_PORT: ${{ secrets.OVH_SSH_PORT }}
-          SOURCE: "./"
-          TARGET: ${{ secrets.OVH_SSH_TARGET }}
-          ARGS: "-rltzvO --no-perms --no-times"
-          EXCLUDE: ".git/, .github/, .DS_Store, .claude/, README.md"
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.OVH_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "${{ secrets.OVH_SSH_PORT }}" "${{ secrets.OVH_SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Rsync deploy
+        run: |
+          rsync -rltzvO --no-perms --no-times \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.OVH_SSH_PORT }}" \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.DS_Store' \
+            --exclude='.claude/' \
+            --exclude='README.md' \
+            ./ "${{ secrets.OVH_SSH_USER }}@${{ secrets.OVH_SSH_HOST }}:${{ secrets.OVH_SSH_TARGET }}"
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
