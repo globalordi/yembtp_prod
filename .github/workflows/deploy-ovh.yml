@@ -6,27 +6,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  ftp-deploy:
-    name: Deploy via FTPS
+  ssh-deploy:
+    name: Deploy via SSH/rsync
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via rsync over SSH
+        uses: easingthemes/ssh-deploy@v5.1.0
         with:
-          server: ${{ secrets.OVH_FTP_SERVER }}
-          username: ${{ secrets.OVH_FTP_USERNAME }}
-          password: ${{ secrets.OVH_FTP_PASSWORD }}
-          server-dir: ${{ secrets.OVH_FTP_SERVER_DIR }}
-          protocol: ftps
-          security: loose
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/.DS_Store
-            **/.claude/**
-            README.md
+          SSH_PRIVATE_KEY: ${{ secrets.OVH_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.OVH_SSH_HOST }}
+          REMOTE_USER: ${{ secrets.OVH_SSH_USER }}
+          REMOTE_PORT: ${{ secrets.OVH_SSH_PORT }}
+          SOURCE: "./"
+          TARGET: ${{ secrets.OVH_SSH_TARGET }}
+          ARGS: "-rltzvO --no-perms --no-times"
+          EXCLUDE: ".git/, .github/, .DS_Store, .claude/, README.md"
