@@ -5,10 +5,17 @@
 
 
 # ─────────────────────────────────────────────────────────────
-#  1. Forcer HTTPS (redirection 301 HTTP → HTTPS)
+#  1. Redirections — www → apex puis HTTP → HTTPS (301)
 # ─────────────────────────────────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # 1a. www.yembtp.fr (HTTP ou HTTPS) → https://yembtp.fr/...
+  #     Un seul saut depuis www, quel que soit le protocole d'entrée.
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # 1b. apex en HTTP → apex en HTTPS
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
