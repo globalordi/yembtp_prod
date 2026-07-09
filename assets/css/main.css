@@ -652,54 +652,6 @@
     }
 
     /* ─────────────────────────────────────────
-       MARQUEE
-    ───────────────────────────────────────── */
-    .marquee {
-      padding: 28px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--bg-soft);
-      overflow: hidden;
-      position: relative;
-    }
-    .marquee::before, .marquee::after {
-      content: "";
-      position: absolute;
-      top: 0; bottom: 0;
-      width: 120px;
-      z-index: 2;
-      pointer-events: none;
-    }
-    .marquee::before { left: 0; background: linear-gradient(90deg, var(--bg-soft), transparent); }
-    .marquee::after { right: 0; background: linear-gradient(-90deg, var(--bg-soft), transparent); }
-    .marquee-track {
-      display: flex;
-      gap: 60px;
-      width: max-content;
-      animation: scroll 40s linear infinite;
-    }
-    @keyframes scroll {
-      to { transform: translateX(-50%); }
-    }
-    .marquee-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-family: 'Fraunces', 'Times New Roman', serif;
-      font-size: 22px;
-      color: var(--text-dim);
-      font-style: italic;
-      font-weight: 400;
-      white-space: nowrap;
-      font-variation-settings: "SOFT" 100, "opsz" 144;
-      letter-spacing: 0.005em;
-    }
-    .marquee-item .star {
-      color: var(--gold-2);
-      font-size: 16px;
-    }
-
-    /* ─────────────────────────────────────────
        SECTION COMMON
     ───────────────────────────────────────── */
     section { padding: 140px 0; position: relative; }
@@ -2245,8 +2197,6 @@
       .step { padding: 28px 22px; }
       .step-num { font-size: 36px; margin-bottom: 16px; }
 
-      .marquee-item { font-size: 18px; }
-
       footer { padding: 64px 0 32px; }
     }
     @media (max-width: 380px) {
@@ -2746,18 +2696,6 @@
       color: var(--gold-1);
     }
 
-    /* Marquee : pause au hover + items cliquables */
-    .marquee:hover .marquee-track {
-      animation-play-state: paused;
-    }
-    .marquee-item {
-      cursor: pointer;
-      transition: color 0.3s ease, transform 0.3s var(--ease-out);
-    }
-    .marquee-item:hover {
-      color: var(--gold-1);
-    }
-
     /* Ripple effect sur boutons dorés ─────── */
     .btn-gold, .btn-outline {
       position: relative;
@@ -2788,5 +2726,4 @@
         transform: none !important;
       }
       .ripple { display: none; }
-      .marquee-track { animation: none; }
     }

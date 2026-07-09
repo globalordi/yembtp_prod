@@ -30,17 +30,6 @@
     'hero.chip2':        { fr: 'CEE Partenaire', en: 'CEE Partner' },
     'hero.chip3':        { fr: '+ 250 000 m²',   en: '+ 250,000 sq.m' },
 
-    // MARQUEE
-    'marquee.climatisation': { fr: 'Climatisation',         en: 'Air conditioning' },
-    'marquee.ventilation':   { fr: 'Ventilation',           en: 'Ventilation' },
-    'marquee.chauffage':     { fr: 'Chauffage',             en: 'Heating' },
-    'marquee.isolation':     { fr: 'Isolation thermique',   en: 'Thermal insulation' },
-    'marquee.menuiserie':    { fr: 'Menuiserie',            en: 'Joinery' },
-    'marquee.serrurerie':    { fr: 'Serrurerie',            en: 'Metalwork' },
-    'marquee.plomberie':     { fr: 'Plomberie',             en: 'Plumbing' },
-    'marquee.flocage':       { fr: 'Flocage coupe-feu',     en: 'Fireproof spraying' },
-    'marquee.energie':       { fr: 'Solutions énergétiques', en: 'Energy solutions' },
-
     // ABOUT
     'about.badge_overlay_small': { fr: 'Depuis 2018', en: 'Since 2018' },
     'about.badge_overlay_strong':{ fr: '+ 250 000 m² réalisés', en: '+ 250,000 sq.m delivered' },

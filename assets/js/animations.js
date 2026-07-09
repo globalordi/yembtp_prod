@@ -184,13 +184,6 @@
     img.appendChild(overlay);
   });
 
-  // ── 10) MARQUEE — items cliquables vers #services ──
-  document.querySelectorAll('.marquee-item').forEach((item) => {
-    item.addEventListener('click', () => {
-      document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
   // ── 11) Refresh ScrollTrigger après chargement des fontes ──
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => ScrollTrigger.refresh());
