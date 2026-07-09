@@ -92,7 +92,6 @@
     'team.lead':         { fr: 'Architectes, ingénieurs, chefs de projet et ouvriers qualifiés — réunis pour fournir des résultats d’exception, alliant qualité, durabilité et satisfaction client.', en: 'Architects, engineers, project managers and skilled workers — united to deliver exceptional results combining quality, durability and client satisfaction.' },
     'team.saber_bubble': { fr: 'Fondateur de YEMBTP, je mets toute mon expertise au service de vos projets.', en: 'Founder of YEMBTP — I put all my expertise at the service of your projects.' },
     'team.saber_role':   { fr: 'Président', en: 'President' },
-    'team.saber_exp':    { fr: '15 ans d’expérience dans le domaine du CVC', en: '15 years of experience in HVAC' },
     'team.ahmed_bubble': { fr: 'Je vous accompagne de l’étude à la livraison pour concrétiser vos projets.', en: 'I support you from study to handover, turning your projects into reality.' },
     'team.ahmed_role':   { fr: 'Chargé d’affaires', en: 'Account Manager' },
     'team.sandra_bubble':{ fr: 'Rigueur et suivi précis pour la gestion administrative et comptable de vos projets.', en: 'Rigour and precise tracking for the administrative and accounting management of your projects.' },
