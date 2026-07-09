@@ -177,6 +177,7 @@
     // FOOTER
     'footer.brand_p':    { fr: 'Construisons ensemble des projets solides et durables. Spécialiste CVC, isolation, menuiserie et serrurerie pour les professionnels.', en: 'Let’s build solid and lasting projects together. HVAC, insulation, joinery and metalwork specialist for professionals.' },
     'footer.aria_ig':    { fr: 'Instagram', en: 'Instagram' },
+    'footer.aria_fb':    { fr: 'Facebook', en: 'Facebook' },
     'footer.aria_google':{ fr: 'Profil Google', en: 'Google profile' },
     'footer.col1_h':     { fr: 'Entreprise', en: 'Company' },
     'footer.col1_about': { fr: 'À propos', en: 'About' },
