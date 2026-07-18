@@ -41,11 +41,12 @@
   if (isFine && !reduce) {
     const hv = document.querySelector('.hero-visual');
     if (hv) {
+      const clamp = (v, max) => Math.max(-max, Math.min(max, v));
       let tx = 0, ty = 0, cx = 0, cy = 0, active = false;
       const onMove = (e) => {
         const r = hv.getBoundingClientRect();
-        tx = ((e.clientX - (r.left + r.width / 2)) / window.innerWidth) * 18;
-        ty = ((e.clientY - (r.top + r.height / 2)) / window.innerHeight) * 14;
+        tx = clamp(((e.clientX - (r.left + r.width / 2)) / window.innerWidth) * 18, 10);
+        ty = clamp(((e.clientY - (r.top + r.height / 2)) / window.innerHeight) * 14, 10);
         active = true;
       };
       window.addEventListener('mousemove', onMove, { passive: true });
