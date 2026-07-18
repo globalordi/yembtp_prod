@@ -18,7 +18,7 @@
     'nav.home_label':    { fr: 'Accueil',        en: 'Home' },
 
     // HERO
-    'hero.tag':          { fr: 'Spécialiste CVC · Pros & Entreprises', en: 'HVAC specialist · Pros & Businesses' },
+    'hero.tag':          { fr: 'Spécialiste CVC en Île-de-France · Pros & Entreprises', en: 'HVAC specialist in Île-de-France · Pros & Businesses' },
     'hero.title':        { fr: 'Construisons ensemble<br/>des projets <em>solides</em> <em>et durables.</em>', en: 'Let’s build<br/><em>solid</em> <em>and lasting</em> projects together.' },
     'hero.sub':          { fr: 'Votre projet, notre exigence jusque dans les moindres détails. Du diagnostic aux économies réelles, nous réduisons votre facture d’énergie de A à Z.', en: 'Your project, our standards down to the smallest detail. From diagnosis to real savings, we cut your energy bill from A to Z.' },
     'hero.cta_primary':  { fr: 'Démarrer mon projet',    en: 'Start my project' },
