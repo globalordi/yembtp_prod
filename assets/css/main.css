@@ -678,18 +678,7 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       margin-bottom: 24px;
-      padding-left: 32px;
-      position: relative;
       font-weight: 600;
-    }
-    .sec-eyebrow::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 22px;
-      height: 1px;
-      background: var(--gold-2);
     }
     .sec-title {
       font-family: 'Fraunces', 'Times New Roman', serif;
@@ -1500,11 +1489,6 @@
       align-items: center;
       gap: 8px;
     }
-    .ref-spec::before {
-      content: "";
-      width: 16px; height: 1px;
-      background: var(--gold-2);
-    }
 
     /* ── Carte clickable + badge "Avant / Après" ── */
     body.ba-locked { overflow: hidden; }
@@ -2012,18 +1996,9 @@
     .footer-col ul a {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       position: relative;
     }
-    .footer-col ul a::before {
-      content: "";
-      width: 0;
-      height: 1px;
-      background: var(--gold-2);
-      transition: width 0.3s var(--ease-out);
-    }
     .footer-col a:hover { color: #fff4d4; }
-    .footer-col ul a:hover::before { width: 14px; }
 
     .footer-contact ul { gap: 14px; }
     .footer-contact li {

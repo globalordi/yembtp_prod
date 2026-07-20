@@ -84,7 +84,7 @@
     'team.ahmed_bubble': { fr: 'Je vous accompagne de l’étude à la livraison pour concrétiser vos projets.', en: 'I support you from study to handover, turning your projects into reality.' },
     'team.ahmed_role':   { fr: 'Chargé d’affaires', en: 'Account Manager' },
     'team.sandra_bubble':{ fr: 'Rigueur et suivi précis pour la gestion administrative et comptable de vos projets.', en: 'Rigour and precise tracking for the administrative and accounting management of your projects.' },
-    'team.sandra_role':  { fr: 'Comptable', en: 'Accountant' },
+    'team.sandra_role':  { fr: 'Assistante de direction', en: 'Executive Assistant' },
     'team.paulo_bubble': { fr: 'La menuiserie est ma passion : précision et finitions soignées garanties.', en: 'Joinery is my passion: precision and refined finishes guaranteed.' },
     'team.paulo_role':   { fr: 'Responsable Pôle Menuiserie', en: 'Head of Joinery' },
     'team.aria_saber':   { fr: 'Voir le message de Saber',  en: 'See Saber’s message' },
